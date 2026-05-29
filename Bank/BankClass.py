@@ -1,11 +1,12 @@
 import random
+# Bank Class
 class Bank:
     def __init__(self, account_name, balance):
         self.account_name = account_name
         self.balance = balance
         self.account_number = "".join(str(random.randint(0, 9)) for i in range(16))
 
-    # Deposit Function
+    # Deposit Function   
     def deposit(self, amount):
         if amount > 0:
             self.balance += amount
